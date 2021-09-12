@@ -262,7 +262,7 @@ AVA.
 % ---
 %
 \begin{folhadeaprovacao}
-\imprimirfolhadeaprovacao
+% \imprimirfolhadeaprovacao
 \end{folhadeaprovacao}
 
 
@@ -362,9 +362,9 @@ Information and Communications Technology (ICT) are fundamental and determinant 
 
 % UTILIZE QUASE HAJA TABELAS NA MONOGRAFIAS. EM QUASO DE AUSENCIA DE TABELAS COMENTAR COM AS 3 LINHAS DE CODIGOS UTILIZANDO O '%'.
 
-%\pdfbookmark[0]{\listtablename}{lot}
-%\listoftables*
-%\cleardoublepage
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
 % ---
 
 % ---
@@ -470,56 +470,24 @@ Levantar soluções para resolver as falhas de acessibilidade identificadas de m
 
 Neste capítulo será apresentada trabalhos relacionados encontrados durante o desenvolvimento deste trabalho.
 
-% \section{\textit{An Agri-food Supply Chain Traceability System for
-% China Based on RFID & Blockchain Technology}} 
+\section{Testes automáticos de acessibilidade em aplicações móveis} 
 
-% Criado para ajudar com o controle de cadeia de produção de produtos agrícolas na China, a proposta tem como objetivo o uso de sensores e tecnologia \textit{blockchain} para garantir a segurança de consumo desses alimentos. O trabalho propõe principalmente o uso de sensores RFID (Identificação por Radiofrequência), que são sensores conforme a Figura \ref{Sensor RFID} que capturam dados a partir de etiquetas eletrônicas ou RF tags e permitem o controle e visualização dos mesmos. A partir destes sensores seria feita a confirmação dos dados e os mesmos passariam a ser registrados em uma rede \textit{blockchain} \cite{tian2016agri}.
+Inserido no contexto empresarial, este estudo de \cite{chantre2015testes} foi desenvolvida para aumentar os serviços de testes disponibilizados pela empresa Altran ao cliente Axa Banque. O trabalho discute sobre as normas de acessibilidade definidas pela World Wide Web Consortium (W3C) e pela legislação \textit{Section} 508 dos Estados Unidos da América. Além disso, também levanta métodos e técnicas dos testes de software tradicionais e de acessibilidade porém com aplicação nas particularidades dos aplicativos móveis. Os resultados dos testes, na dissertação, são integrados em plataformas de gestão de testes como o Testlink.
 
-% Assim como neste trabalho, o trabalho relacionado consiste em um registro de dados em cadeias de uma rede \textit{blockchain} para com isso ter sua rastreabilidade, usando até mesmo de dados registrados por sensores, porém o mesmo foi desenvolvido para o uso do controle de uma produção agrícola somente.
+Assim como neste trabalho, é relacionado as normas de acessibilidade da W3C com os métodos e técnicas de automação de testes para promover acessibilidade, implementando as recomendações sugeridas pelas normas e diretrizes internacionais. No entanto, o estudo foi realizado com ênfase nas aplicações móveis e não para o Conteúdo da Web no geral.
 
-% \begin{figure}[!h]
-% \centering
-% \caption{Exemplo de sensor e RF tag, usados em um microcontrolador Arduino}
-% \fbox{\includegraphics [scale=0.5]{trabalho_relacionado_1.jpg}}
-% \legend{Fonte: \cite{MicroControlandos}}
-% \label{Sensor RFID}
-% \end{figure}
+\section{Avaliação contínua de acessibilidade para apoio às evoluções de websites} 
 
-% \section{\textit{How blockchain improves the supply chain: case study alimentary supply chain}} 
+O estudo de \cite{silva2017avaliaccao} discorre sobre como a acessibilidade de um website se comporta com a adoção de um processo contínuo de avaliação da acessibilidade por meio de ferramentas automatizadas levando em consideração as manutenções e modificações feitas ao longo de sua existência. Para isso, o trabalho tenta mensurar a cobertura, completude e corretude das ferramentas de análise de acessibilidade web.
 
-% Proposta de modelo de cadeias de produção via \textit{blockchain}, com isso habilitando um economia circular e eliminando alguns problemas encontrados em cadeias de produção. Sua arquitetura pode ser vista na Figura \ref{Arquitetura Proposta pelo trabalho relacionado}, que mostra que cada uma de suas camadas se comunica a partir dos contratos inteligentes \cite{casado2018blockchain}.
+Apesar das diferenças de conteúdo estático e dinâmico em relação aos websites e sistemas web, que são consideradas na monografia e já foram também consideradas pelas ferramentas mais modernas como a Lighthouse, é possível testar os critérios de sucesso e as falhas apontadas e analisar se o número de violações da aplicação foram apontadas corretamente assim como a completude da reportação.
 
-% Embora a proposta seja semelhante à proposta levantada neste trabalho, a mesma não mostrava uma implementação de como seria feita, e sua estrutura de dados é baseada em um modelo circular para melhoria de registro de dados em qualquer cadeia de produção. 
 
-% \begin{figure}[!h]
-% \centering
-% \caption{Arquitetura Proposta pelo trabalho relacionado}
-% \fbox{\includegraphics [scale=0.7]{trabalho_relacionado_2.png}}
-% \legend{Fonte: \cite{casado2018blockchain}}
-% \label{Arquitetura Proposta pelo trabalho relacionado}
-% \end{figure}
+\section{Estudo sobre Requisitos e Automação do Teste de Acessibilidade para Surdos em Aplicações Web}
 
-% \section{QuipoAgro} 
+Discorre sobre o uso de ferramentas e tecnologias desenvolvidas para testar a acessibilidade em ambientes da web dando ênfase aos usuários surdos, assim como os requisitos mais relevantes aos surdos para elaboração dos testes que são definidos pelas normas e diretrizes de acessibilidade. Nesse caso, os identificando pela revisão da literatura. O estudo de \cite{sousa2020estudo} também desenvolveu um protótipo de aplicação web denominado central de intérprete para interação com usuários surdos por meio de vídeos em Língua de Sinal, em parceria com a Faculdade de Letras da Universidade Federal de Goiás. Já para automatizar a avaliação foi através do suporte ferramental \textit{Web Accessibility Evaluation Testing}.
 
-% Produto criado para rastreabilidade de cadeias de produção de café, o mesmo possui o armazenamento de dados de etapas de produção de café e faz o registro das mesmas em rede \textit{blockchain}, conforme a Figura \ref{Interface QuipoAgro} \cite{QuipoAgro}.
-
-% \begin{figure}[!h]
-% \centering
-% \caption{Interface QuipoAgro}
-% \fbox{\includegraphics [scale=0.8]{Interface_QuipoAgro.PNG}}
-% \legend{Fonte: agro.quipo.io/bt/1}
-% \label{Interface QuipoAgro}
-% \end{figure}
-
-% O produto apresenta um funcionamento que se assemelha a forma que é desejada para o protótipo desenvolvido durante este trabalho, porém com a principal diferença sendo a permissão do envio de arquivos somente em um formato específico, enquanto o protótipo desenvolvido durante neste trabalho visa a permissão de dados para cadeias generalizadas.
-
-% \begin{figure}[!h]
-% \centering
-% \caption{Comparação entre trabalhos relacionados}
-% \fbox{\includegraphics [scale=0.7]{Comparacao_trabalhos_relacionados.PNG}}
-% \legend{Fonte: Autoria Própria}
-% \label{Comparação entre trabalhos relacionados}
-% \end{figure}
+O trabalho se relaciona com a monografia na medida em que tem suas abordagens de avaliação de acessibilidade voltadas para automatização dos testes nos ambientes da web. Muitas das ferramentas, métodos e normas, que no caso do estudo foram levantadas através da revisão da literatura, também se assemelham as abordagens de quando se pretende verificar os requisitos e diretrizes para compreender a acessibilidade no Conteúdo da Web no geral, explicitando as principais diferenças das ferramentas e diretrizes recomendadas pela W3C nos documentos como as próprias WCAG, suas derivações de técnicas e de apoio à implementação. No entanto, como o público-alvo são usuários surdos, a escolha do principal suporte ferramental não se baseou na maior quantidade de requisitos identificados pelas WCAG, como nas abordagens de caráter mais genérico e nas ferramentas baseadas no aXe-core, como o Ligthouse.
 
 
 \chapter{FUNDAMENTAÇÃO TEÓRICA}
@@ -624,7 +592,42 @@ Foi realizada uma pesquisa exploratória com o intuito de levantar procedimentos
 
 Foram analisadas 89 páginas do AVA a partir de um login com perfil de estudante. 178 testes automatizados foram executados – 1 por página – e encontradas, em um primeiro momento, um total de 600 falhas de acessibilidade. Ainda é preciso analisar as páginas com privilégio administrativo, disponíveis apenas no login de professores.
 
-Em segunda instância, verificou-se que algumas páginas estavam sendo afetadas pelos mesmos componentes, o que causou duplicidades na análise ainda que os impactos na acessibilidade da plataforma afetem individualmente e repetitivamente a experiência do usuário com alguma deficiência. A pesquisa seguiu identificando em cada resultado por página, manualmente, os problemas de acessibilidade que já haviam sido acusados pelos testes em páginas anteriores. Foram consideradas duplicatas as análises sobre os mesmos componentes em duas páginas diferentes, que acusavam as mesmas vulnerabilidades. O mesmo tipo de falha de acessibilidade, encontrado em elementos distintos, também foi analisado separadamente considerando que apesar de ter a mesma solução ela deve ser aplicada em contextos diferentes, dependendo do elemento. Nessa fase, o total de falhas de acessibilidade passou a ser de 148 vulnerabilidades.
+Em segunda instância, verificou-se que algumas páginas estavam sendo afetadas pelos mesmos componentes, o que causou duplicidades na análise ainda que os impactos na acessibilidade da plataforma afetem individualmente e repetitivamente a experiência do usuário com alguma deficiência. A pesquisa seguiu identificando em cada resultado por página, manualmente, os problemas de acessibilidade que já haviam sido acusados pelos testes em páginas anteriores. Foram consideradas duplicatas as análises sobre os mesmos componentes em duas páginas diferentes, que acusavam as mesmas vulnerabilidades. O mesmo tipo de falha de acessibilidade, encontrado em elementos distintos, também foi analisado separadamente considerando que apesar de ter a mesma solução ela deve ser aplicada em contextos diferentes, dependendo do elemento. Assim, o total de falhas de acessibilidade passou a ser de 148 vulnerabilidades com 12 soluções para resolver cada tipo de falha. Essas falhas/soluções estão representadas na tabela abaixo.
+
+
+
+
+
+
+% tabela dos asserts
+\begin{table}[h]
+\centering
+\caption{Asserts que falharam nos testes automatizados}
+\begin{tabular}{r|lr}
+
+Numera{\c c}{\~a}o & Falha de acessibilidade \\ % Note a separação de col. e a quebra de linhas
+\hline                               % para uma linha horizontal
+1 & ARIA input fields do not have accessible names       \\
+2 & Children with a specific role that are required by the parent ARIA element are missing \\
+3 & Background and foreground colors do not have a sufficient contrast ratio             \\
+4 & Id attributes on active, focusable elements are not unique        \\
+5 & Heading elements are not in a sequentially-descending order \\             
+6 & Form elements do not have associated labels \\
+7 & Image elements do not have alt attributes \\
+8 & object elements do not have alt text \\
+9 & Frame or iframe elements do not have a title \\
+10 & ARIA progressbar elements do not have accessible names \\
+11 & Links do not have a discernible name \\
+12 & Lists do not contain only li elements and script supporting elements (script and template)
+% não é preciso quebrar a última linha
+
+\end{tabular}
+\end{table}
+
+
+
+
+
 
 Durante a análise de duplicidade, os resultados também mostraram que a estrutura das páginas e seções é que continham os problemas de acessibilidade e não os dados ou valores taggeados. Com isso, foi revelado também que o mesmo tipo de página ou seção apresentavam os mesmos problemas de falha de acessibilidade ainda que fizesse parte de uma disciplina diferente. Por exemplo, a disciplina “2021/1 – DESENVOLVIMENTO DE APLICAÇÕES MÓVEIS” possuía as mesmas falhas de acessibilidade na seção Conteúdo das Aulas que a disciplina “2021/1 – COMPUTAÇÃO GRÁFICA E PROCESSAMENTO DE IMAGENS” na mesma seção. Ou seja, apesar dos testes automatizados terem sido executados em cima das disciplinas ofertadas para o 6º/7º período flex. das turmas semestrais de Ciência da Computação em 2021, os resultados cobrem todas as disciplinas do curso que apresentam as mesmas seções.
 
@@ -635,7 +638,7 @@ Durante a análise de duplicidade, os resultados também mostraram que a estrutu
 
     \item Google Lighthouse
     
-[escreva aqui]
+[escreva aqui o motivo da escolha do Lighthouse]
     
     \item Chrome DevTools’ Color Picker
     
@@ -669,6 +672,8 @@ Para utilização da ferramenta, depois de habilitada, basta inspecionar o eleme
 
 A avaliação identificou os problemas chaves de acessibilidade, mais frequentes e como estão distribuídos, que se relacionam com os fatores de pontuação e classificação de acessibilidade providos pelo próprio Google Lighthouse. No total, 12 asserts falharam.
 
+
+
 \section{Sugestões de melhoria}
 
 A partir desta apuração, foram levantadas para cada falha de acessibilidade uma proposta de solução que deve ser aplicada contextualmente a cada elemento acusado pelo Lighthouse com a mesma falha. As soluções, quando implementadas, impactariam consideravelmente a pontuação de acessibilidade do AVA, sendo esperada uma mudança na sua classificação de laranja para verde – considerada ideal pela ferramenta do Google.
@@ -701,7 +706,7 @@ aria-label="Texto descritivo aqui">
     
 \pagebreak
     
-    \item Elements with an ARIA [role] that require children to contain a specific [role] are missing some or all of those required children
+    \item Children with a specific role that are required by the parent ARIA element are missing
     
 Esta falha de acessibilidade acontece quando uma ARIA role é atribuída a um elemento com propósito de dizer aos leitores de tela e outras tecnologias assistivas qual o comportamento e os controles customizados que um componente da aplicação tem. Algumas dessas roles exigem que os filhos do elemento também tenham roles específicas que trabalham em conjunto com a do pai. Por exemplo, a role tablist exige que os filhos tenham a role tab.
 
