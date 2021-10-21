@@ -423,7 +423,7 @@ Vivemos em um tempo de explosão informacional onde as Tecnologias de Informaç�
 
 Por outro lado, quando o acesso às tecnologias não se dá de forma uniforme é criado um fenômeno de "marginalização informacional", como afirmado em  \cite{matellart2002historia}. Em \cite{esteves2010novos}, essa exclusão social compreende uma nova versão do “digital divide”, que evidencia como as diferenças de acesso refletem as reais desigualdades sociais, políticas e econômicas entre a população incluída e excluída digitalmente.
 
-Apesar do tema Inclusão Social e Digital vir sendo objeto de debates no meio acadêmico, governamental e empresarial, a questão da inclusão de pessoas portadoras de necessidades especiais, em todos os recursos da sociedade, ainda é muito incipiente no Brasil \cite{maciel2000portadores}. Uma das formas de exclusão digital está associada justamente à falta de acessibilidade nos serviços e informações da Web, embora ela tenha sido projetada para ser utilizada por qualquer pessoa. As Diretrizes de Acessibilidade para Conteúdo Web (WCAG) visam fornecer recomendações que tornem o conteúdo acessível a um maior número de pessoas com deficiência, que incluem:
+Apesar do tema Inclusão Social e Digital vir sendo objeto de debates no meio acadêmico, governamental e empresarial, a questão da inclusão de pessoas que possuem alguma deficiência, em todos os recursos da sociedade, ainda é muito incipiente no Brasil \cite{maciel2000portadores}. Uma das formas de exclusão digital está associada justamente à falta de acessibilidade nos serviços e informações da Web, embora ela tenha sido projetada para ser utilizada por qualquer pessoa. As Diretrizes de Acessibilidade para Conteúdo Web (WCAG) visam fornecer recomendações que tornem o conteúdo acessível a um maior número de pessoas com deficiência, que incluem:
 
 \begin{citacao}
 “acomodações para cegueira e baixa visão, surdez e baixa audição, limitações de movimentos, incapacidade de fala, fotossensibilidade e combinações destas características, e alguma acomodação para dificuldades de aprendizagem e limitações cognitivas; mas não abordará todas as necessidades de usuários com essas deficiências. Seu conteúdo da Web também ficará mais acessível aos usuários em geral ao seguir estas diretrizes.” \cite{caldwell2008web}
@@ -433,7 +433,7 @@ Nos dias atuais, é uma prática intrínseca ao desenvolvimento de um Sistema We
 
 Por causa disso surgiram as \textit{engines} como Axe e Pa11y, que implementam as regras da WCAG e rodam testes automatizados de acessibilidade nas páginas de uma aplicação da web. Elas foram arquitetadas e desenvolvidas para integrar com qualquer ambiente de teste já existente em um projeto, de forma que as organizações possam automatizar os testes de acessibilidade junto dos seus testes regulares.
 
-Essas ferramentas foram utilizadas neste trabalho para realizar um estudo de caso no Ambiente Virtual de Aprendizagem (AVA) do Centro Universitário Serra dos Órgãos (Unifeso), com o intuito de explicitar as formas mais modernas de se realizar testes automatizados de acessibilidade em e-Learnings e, com isso, alcançar práticas mais democráticas no acesso ao ensino e às tecnologias por pessoas portadoras de alguma deficiência.
+Essas ferramentas foram utilizadas neste trabalho para realizar um estudo de caso no Ambiente Virtual de Aprendizagem (AVA) do Centro Universitário Serra dos Órgãos (Unifeso), com o intuito de explicitar as formas mais modernas de se realizar testes automatizados de acessibilidade em e-Learnings e, com isso, alcançar práticas mais democráticas no acesso ao ensino e às tecnologias por pessoas que possuem alguma forma de deficiência.
 
 
 \section{Justificativa}
@@ -549,6 +549,7 @@ Mas em relação a acessibilidade, que considera a diversidade de seus possívei
 Nesse contexto que surgiram as engines como Axe e Pa11y, que verificam se as regras da WCAG foram devidamente implementadas e executam testes automatizados de acessibilidade nas páginas de uma aplicação da web. Elas foram arquitetadas e desenvolvidas para integrar com qualquer ambiente de teste já existente em um projeto, de forma que as organizações possam automatizar os testes de acessibilidade junto dos seus testes regulares.
 
 \section{Principais ferramentas automatizadas para testes de acessibilidade}
+\label{sec:ferramentas}
 
 % [Caso seja melhor citar a page desatualizada do wcag das principais ferramentas para se automatizar e que essas, consideradas as melhores, foram retiradas de lá]:
 
@@ -594,31 +595,7 @@ Foram analisadas 89 páginas do AVA a partir de um login com perfil de estudante
 
 Em segunda instância, verificou-se que algumas páginas estavam sendo afetadas pelos mesmos componentes, o que causou duplicidades na análise ainda que os impactos na acessibilidade da plataforma afetem individualmente e repetitivamente a experiência do usuário com alguma deficiência. A pesquisa seguiu identificando em cada resultado por página, manualmente, os problemas de acessibilidade que já haviam sido acusados pelos testes em páginas anteriores. Foram consideradas duplicatas as análises sobre os mesmos componentes em duas páginas diferentes, que acusavam as mesmas vulnerabilidades.
 
-
-% caso seja preciso referenciar
-% \ref{Habilitação da Chrome DevTools’ Color Picker no DevTools}.
-
-\begin{figure}[!h]
-\centering
-\caption{Distribuição dos problemas de acessibilidade por categoria}
-\fbox{\includegraphics [scale=1.1]{Figura19.png}}
-\legend{Fonte: Próprio autor}
-\label{Distribuição dos problemas de acessibilidade por categoria}
-\end{figure}
-
-
-\begin{figure}[!h]
-\centering
-\caption{Distribuição dos problemas de acessibilidade por plataforma}
-\fbox{\includegraphics [scale=1.1]{Figura20.png}}
-\legend{Fonte: Próprio autor}
-\label{Distribuição dos problemas de acessibilidade por plataforma}
-\end{figure}
-
-
-
 O mesmo tipo de falha de acessibilidade, encontrado em elementos distintos, também foi analisado separadamente considerando que apesar de ter a mesma solução ela deve ser aplicada em contextos diferentes, dependendo do elemento. Assim, o total de falhas de acessibilidade passou a ser de 148 vulnerabilidades com 12 soluções para resolver cada tipo de falha. Essas falhas/soluções estão representadas na tabela abaixo.
-
 
 
 
@@ -651,11 +628,36 @@ Numera{\c c}{\~a}o & Falha de acessibilidade \\ % Note a separação de col. e a
 
 
 
+O Lighthouse classifica os problemas de acessibilidade em 8 principais categorias: Navigation, que contém as falhas prejudiciais à navegação do teclado; ARIA, representando os erros ou ausência dos atributos ARIA, o que dificulta o uso de leitores de tela e outras tecnologias assistivas; Names and labels, as falhas que atingem principalmente a semântica dos controles da aplicação; Contrast, onde agrupa as falhas que afetam a legibilidade do conteúdo das páginas; Tables and lists, problemas que dificultam a leitura de dados tabulares ou de listas através de tecnologia assistiva; Internationalization and localization, que representa os erros de interpretação do conteúdo por usuários em diferentes localidades; Best practices, quando falta um atributo ou outros itens que compõem as melhores práticas comuns de acessibilidade; e, por fim, Audio and video, onde estão as falhas por ausência de conteúdo alternativo para áudio e vídeo.
+
+Além disso, a ferramenta analisa a responsividade do sistema e as falhas que são causadas por conta da resolução do dispositivo do usuário. Dessa forma, ela divide as falhas de acessibilidade em dois grandes grupos: Mobile e Desktop.
+
+No gráfico \ref{Distribuição dos problemas de acessibilidade por categoria} abaixo está representado os tipos de falhas de acessibilidade encontrados no AVA da Unifeso e com que frequência. No gráfico \ref{Distribuição dos problemas de acessibilidade por plataforma} também é possível visualizar a distribuição dos problemas de acessibilidade entre as plataformas Mobile e Desktop.
 
 
+\begin{figure}[!h]
+\centering
+\caption{Distribuição dos problemas de acessibilidade por categoria}
+\fbox{\includegraphics [scale=1.1]{Figura19.png}}
+\legend{Fonte: Próprio autor}
+\label{Distribuição dos problemas de acessibilidade por categoria}
+\end{figure}
+
+
+\begin{figure}[!h]
+\centering
+\caption{Distribuição dos problemas de acessibilidade por plataforma}
+\fbox{\includegraphics [scale=1.1]{Figura20.png}}
+\legend{Fonte: Próprio autor}
+\label{Distribuição dos problemas de acessibilidade por plataforma}
+\end{figure}
+
+
+\pagebreak
 
 Durante a análise de duplicidade, os resultados também mostraram que a estrutura das páginas e seções é que continham os problemas de acessibilidade e não os dados ou valores taggeados. Com isso, foi revelado também que o mesmo tipo de página ou seção apresentavam os mesmos problemas de falha de acessibilidade ainda que fizesse parte de uma disciplina diferente. Por exemplo, a disciplina “2021/1 – DESENVOLVIMENTO DE APLICAÇÕES MÓVEIS” possuía as mesmas falhas de acessibilidade na seção Conteúdo das Aulas que a disciplina “2021/1 – COMPUTAÇÃO GRÁFICA E PROCESSAMENTO DE IMAGENS” na mesma seção. Ou seja, apesar dos testes automatizados terem sido executados em cima das disciplinas ofertadas para o 6º/7º período flex. das turmas semestrais de Ciência da Computação em 2021, os resultados cobrem todas as disciplinas do curso que apresentam as mesmas seções.
 
+\pagebreak
 
 \section{Ferramentas utilizadas na avaliação}
 
@@ -663,7 +665,18 @@ Durante a análise de duplicidade, os resultados também mostraram que a estrutu
 
     \item Google Lighthouse
     
-[escreva aqui o motivo da escolha do Lighthouse]
+Como dito anteriormente na \hyperref[sec:ferramentas]{seção 3.5}, o Lighthouse já utiliza a biblioteca do aXe - a ferramenta que atualmente possui a maior cobertura de falhas de acessibilidade. Além disso, ela já está integrada ao Google Chrome, o que aumenta a produtividade e salva tempo de configuração de ambiente. Por causa dessa integração, nas suas auditorias também é criado um link entre os elementos acusados com algum tipo de falha e a localização desses elementos no DevTools. Com isso, pode-se dizer que também torna o debbuging mais eficiente. Em relação aos reportes da ferramenta, os logs são gerados em HTML, o que melhora a visualização dos dados e facilita a análise. Por fim, também é interessante levar em consideração as suas constantes atualizações pelo Google - um dos principais aliados na fomentação da cultura de acessibilidade digital hoje em dia.
+
+
+\begin{figure}[!h]
+\centering
+\caption{Exemplo de análise de acessibilidade reportada pelo Lighthouse}
+\fbox{\includegraphics [scale=0.36]{Figura21.png}}
+\legend{Fonte: Próprio autor}
+\label{Exemplo de análise de acessibilidade reportada pelo Lighthouse}
+\end{figure}
+
+\pagebreak
     
     \item Chrome DevTools’ Color Picker
     
@@ -677,6 +690,8 @@ A ferramenta Chrome DevTools’ Color Picker possui uma integração com o Googl
 \label{Habilitação da Chrome DevTools’ Color Picker no DevTools}
 \end{figure}
 
+\pagebreak
+
 Para utilização da ferramenta, depois de habilitada, basta inspecionar o elemento que terá a taxa de contraste apurada, identificar o valor de sua cor na guia Styles do DevTools e clicar na thumbnail à esquerda do valor. À direita do agrupamento Contrast ratio, poderá ser visualizada a taxa de contraste do elemento. Adiante na figura \ref{Apuração da taxa de contraste com o Chrome DevTools’ Color Picker } podemos visualizar como a ferramenta verifica o contraste sugerido pela WCAG no nível AA e no nível AAA, respectivamente.
 
 \begin{figure}[!h]
@@ -687,10 +702,24 @@ Para utilização da ferramenta, depois de habilitada, basta inspecionar o eleme
 \label{Apuração da taxa de contraste com o Chrome DevTools’ Color Picker }
 \end{figure}
 
+\pagebreak
+
     \item Extensão Web Developer
     
-[escreva aqui]
-    
+A extensão Web Developer se mostrou uma importante ferramenta complementar para análise de headings. Ela facilita a visualização e análise da ordem em que os headings estão dispostos na tela criando marcações sobrepostas aos elementos da página, como pode ser observado no case  \hyperref[sec:heading]{Heading elements are not in a sequentially-descending order}.
+
+
+\begin{figure}[!h]
+\centering
+\caption{Análise da acessibilidade dos headings na página inicial do AVA usando a extensão Web Developer}
+\fbox{\includegraphics [scale=0.7]{Figura9.jpg}}
+\legend{Fonte: Próprio autor}
+\label{Análise da acessibilidade dos headings na página inicial do AVA usando a extensão Web Developer}
+\end{figure}
+
+\pagebreak
+
+
 \end{itemize}
 
 \chapter{RESULTADOS E DISCUSSÕES}
@@ -804,6 +833,7 @@ Para resolver esse problema é preciso identificar quais elementos têm o mesmo 
 \end{figure}
 
  \item Heading elements are not in a sequentially-descending order
+ \label{sec:heading}
    
 Os chamados headings no HTML são definidos com as tags de <h1> até <h6> e representam os seis níveis de título de seção, assim especificado na seção 4.3.9 das recomendações do W3C para o HTML 5.2 \cite{caldwell2008web}. Um erro muito comum é utilizar esses elementos para marcar slogans, títulos alternativos e subtítulos que não pretendem representar semanticamente o título de uma nova seção, além da utilização dos seus níveis para diminuir ou aumentar o tamanho da fonte do cabeçalho. Esses enganos costumam desviar a estrutura da ordem não-sequêncial e descendente – ideal para que leitores de tela consigam navegar de heading a heading.
 
