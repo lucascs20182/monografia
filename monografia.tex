@@ -152,7 +152,7 @@ WCAG,
 AVA.
 }
 
-\datadadefesa{Data da Defesa: 28 de Novembro de 2020}% PREENCHER COM O DATA DA DEFESA}
+\datadadefesa{Data da Defesa: 22 de Novembro de 2020}% PREENCHER COM O DATA DA DEFESA}
 %\conceito{Conceito: Excelente}
 \faculdadedoorientador{FACULDADE DO ORIENTADOR} %
 \titulacaodoorientador{DSc}%Coloque abreviado a titulação do seu Orientador
@@ -248,9 +248,15 @@ AVA.
 % com o documento, salve-o como PDF no diretório do seu projeto e substitua todo
 % o conteúdo de implementação deste arquivo pelo comando abaixo:
 
-% \begin{fichacatalografica}
-%     \includepdf{fichacatalografica.pdf}
-% \end{fichacatalografica}
+\begin{fichacatalografica}
+    \includepdf{fichacatalografica.pdf}
+    % \includepdf{banca.pdf}
+\end{fichacatalografica}
+
+\begin{banca}
+    \includepdf{banca.pdf}
+    % \includepdf{banca.pdf}
+\end{banca}
 
 
 \newpage
@@ -287,7 +293,7 @@ AVA.
 % ---
 \begin{agradecimentos}
 
-Antes de mais nada quero agradecer principalmente a minha família por todo apoio, participação e incentivo durante todo meu processo de formação. À minha companheira de longo prazo, Sarah de Almeida Ferreira, por sempre me ajudar e socorrer nos momentos mais difíceis da minha vida. Agradeço a todos os meus professores e professoras desde a escola à graduação, ao Centro Universitário Serra dos Órgãos (Unifeso) por todas as oportunidades, experiências e pelo ambiente acolhedor que se tornou a minha segunda casa. Um agradecimento especial aos profs. Tiago Resende e Nelson Lacerda pela impecável disponibilidade e paciência na execução de todo este trabalho.
+Antes de mais nada quero agradecer principalmente a minha família por todo apoio, participação e incentivo durante todo meu processo de formação. À minha companheira, Sarah de Almeida Ferreira, por sempre me acompanhar, ajudar e socorrer nos momentos mais difíceis da minha vida. Agradeço a todos os meus professores e professoras desde a escola à graduação, ao Centro Universitário Serra dos Órgãos (Unifeso) por todas as oportunidades, experiências e pelo ambiente acolhedor que se tornou a minha segunda casa. Um agradecimento especial aos profs. Tiago Resende e Nelson Lacerda pela impecável disponibilidade e paciência na execução de todo este trabalho.
 
 % A todos que, direta ou indiretamente, colaboraram para a realização desta monografia. 
 
@@ -468,7 +474,7 @@ Levantar soluções para resolver as falhas de acessibilidade identificadas de m
 
 \chapter{TRABALHOS RELACIONADOS}
 
-Neste capítulo será apresentada trabalhos relacionados encontrados durante o desenvolvimento deste trabalho.
+Neste capítulo serão apresentados os trabalhos relacionados que foram encontrados durante o desenvolvimento deste trabalho.
 
 \section{Testes automáticos de acessibilidade em aplicações móveis} 
 
@@ -502,7 +508,7 @@ Para fornecer recomendações que tornem o conteúdo nos serviços e informaçõ
 
 \section{WCAG}
  
-As Diretrizes de Acessibilidade para Conteúdo Web (WCAG) são um conjunto de recomendações para deixar a Web mais acessível. Seguir as diretrizes deixa não apenas mais usável para pessoas com alguma deficiência como também para usuários no geral. No documento é descrito vários critérios de sucesso sob a forma de declarações testáveis, especificados de forma que não dependem de nenhuma tecnologia específica e com informações de implementação e interpretação de cada critério de sucesso em documentos separados.
+As Diretrizes de Acessibilidade para Conteúdo Web (WCAG) são um conjunto de recomendações para deixar a Web mais acessível. Seguir as diretrizes deixa não apenas mais usável para pessoas com alguma deficiência como também para usuários no geral. No documento são descritos vários critérios de sucesso sob a forma de declarações testáveis, especificados de forma que não dependem de nenhuma tecnologia específica e com informações de implementação e interpretação de cada critério de sucesso em documentos separados.
 
 Para satisfazer as necessidades de diferentes grupos e situações foram definidos os chamados três níveis de conformidade: A, AA e AAA. O nível A atinge um nível mínimo de acessibilidade. Para atingir esse nível todos os critérios de sucesso do Nível A devem ser cumpridos e assim por diante nos outros níveis de conformidade. O nível AAA é o nível mais elevado e, em relação ao nível AA, esse é o nível considerado ideal, no qual o sistema atinge um nível fundamental de acessibilidade de modo que se torna acessível para a maioria das pessoas e na maior parte das situações, usando a maioria das tecnologias.
 
@@ -581,7 +587,7 @@ O Google Lighthouse é uma ferramenta automatizada de código aberto que utiliza
 
 \pagebreak
 
-Atualmente, o Lighthouse cobre, além dos testes de acessibilidade, testes de desempenho, progressividade, boas práticas e SEO. A ferramenta também pode fazer testes para desktop ou mobile, no último caso usando emuladores de celular durante a auditoria.
+Atualmente, o Lighthouse cobre, além dos testes de acessibilidade, testes de desempenho, progressividade, boas práticas e SEO (Otimização para Mecanismos de Busca). A ferramenta também pode fazer testes para desktop ou mobile, no último caso usando emuladores de celular durante a auditoria.
     
 \end{itemize}
 
@@ -680,7 +686,7 @@ Como dito anteriormente na \hyperref[sec:ferramentas]{seção 3.5}, o Lighthouse
     
     \item Chrome DevTools’ Color Picker
     
-A ferramenta Chrome DevTools’ Color Picker possui uma integração com o Google Chrome, fazendo um link entre as análises automatizadas na guia do Lighthouse e facilitando a identificação e apuração do elemento com falha na acessibilidade na guia de elementos. Ela pode ser habilitada nas configurações do DevTools, na seção Experiments, como ilustrado mais abaixo na figura \ref{Habilitação da Chrome DevTools’ Color Picker no DevTools}.
+A ferramenta Chrome DevTools’ Color Picker possui uma integração com o Google Chrome, fazendo um link entre as análises automatizadas na guia do Lighthouse e facilitando a identificação e apuração do elemento com falha na acessibilidade na guia de elementos. Ela pode ser habilitada nas configurações do DevTools, na seção Experiments, como ilustrado abaixo na figura \ref{Habilitação da Chrome DevTools’ Color Picker no DevTools}.
 
 \begin{figure}[!h]
 \centering
@@ -953,7 +959,7 @@ aria-valuemin="0" aria-valuemax="100">
 
  \item Links do not have a discernible name
    
-Um link deve sempre prover no seu conteúdo um texto descritivo. “A descrição permite o usuário destinguir esse link de outros na página e também determinar se ele deve ou não seguir o link uma vez que a URI de destino geralmente não é suficientemente descritiva” \cite{cooper2010techniques}.
+Um link deve sempre prover no seu conteúdo um texto descritivo. “A descrição permite o usuário distinguir esse link de outros na página e também determinar se ele deve ou não seguir o link uma vez que a URI de destino geralmente não é suficientemente descritiva” \cite{cooper2010techniques}.
 
 O documento também antecipa as situações onde uma imagem é o único conteúdo de um link. Nesse caso, ele diz que a alternativa em texto para imagem – atributo alt – descreve a função exclusiva do link.
 
@@ -981,11 +987,11 @@ Para resolver esse problema basta adicionar algum valor ao atributo alt da tag i
 
  \item Lists do not contain only <li> elements and script supporting elements (<script> and <template>)
    
-Uma prática bastante comum na manipulação do HTML que infelizmente gera uma série de problemas de acessibilidade é a não utilização da semântica da linguagem (também conhecida como POSH, ou \textit{Plain Old Semantic HTML}). Embora seja possível nas combinações de CSS com o JavaScript fazer com que qualquer elemento HTML se comporte da forma que quisermos, é muito provável que as propriedades built-in dos elementos – já embutidos com padrões de acessibilidade pelo teclado – não sejam consideradas na versão não-semântica do HTML. Um bom exemplo dessa prática é quando usam o elemento div para representar um botão sobrescrevendo os estilos padrão dele. Embora visualmente fique semelhante a um botão, as propriedades padrão não serão as mesmas. Isso faz com que as tecnologias assistivas anunciem os elementos de forma errada para os usuários com alguma deficiência, além de encontrar problemas para navegar entre os elementos.
+Uma prática bastante comum na manipulação do HTML que infelizmente gera uma série de problemas de acessibilidade é a utilização da semântica da linguagem da forma antiga (também conhecida como POSH, ou \textit{Plain Old Semantic HTML}). Embora seja possível nas combinações de CSS com o JavaScript fazer com que qualquer elemento HTML se comporte da forma que quisermos, é muito provável que as propriedades built-in dos elementos – já embutidos com padrões de acessibilidade pelo teclado – não sejam consideradas na versão não-semântica do HTML. Um bom exemplo dessa prática é quando usam o elemento div para representar um botão sobrescrevendo os estilos padrão dele. Embora visualmente fique semelhante a um botão, as propriedades padrão não serão as mesmas. Isso faz com que as tecnologias assistivas anunciem os elementos de forma errada para os usuários com alguma deficiência, além de encontrar problemas para navegar entre os elementos.
 
 Uma lista pode ser de definição, ordenada ou desordenada. Quando a lista é ordenada (elemento ol) ou desordenada (elemento ul) todos os seus filhos devem ser um list item  (elemento li). É por isso que, como  afirmado na técnica H48, “quando uma marcação é usada para formatar itens visualmente como uma lista, mas  não representam o relacionamento da lista, os usuários (de alguma tecnologia assistiva) têm dificuldade para navegar pelas informações” \cite{cooper2010techniques}.
 
-Nas figuras \ref{Estrutura do AVA acusado pelo Lighthouse com problema de acessibilidade: um  elemento ul mantendo uma div como filha além dos elementos lis apropriados} e \ref{Div representando um item visual de carregamento} abaixo podemos perceber, analisando os trechos de código denunciados pela ferramenta Lighthouse, que a div contida dentro da ul forma, na verdade, uma animação de carregamento para o usuário a espera de alguma requisição. Como não é semanticamente adequada a uma lista, a solução recomendada é de mover a div acima ou abaixo dela e usar CSS para reposicionar o elemento, de forma que não altere o visual atual da página mas entre em conformidade com o POSH.
+Nas figuras \ref{Estrutura do AVA acusado pelo Lighthouse com problema de acessibilidade: um  elemento ul mantendo uma div como filha além dos elementos lis apropriados} e \ref{Div representando um item visual de carregamento} abaixo podemos perceber, analisando os trechos de código denunciados pela ferramenta Lighthouse, que a div contida dentro da ul forma, na verdade, uma animação de carregamento para o usuário a espera de alguma requisição. Como não é semanticamente adequada a uma lista, a solução recomendada é de mover a div acima ou abaixo dela e usar CSS para reposicionar o elemento, de forma que não altere o visual atual da página mas entre em conformidade com a forma correta, semântica, de usar o HTML.
 
 \begin{figure}[!h]
 \centering
@@ -1038,6 +1044,13 @@ Com as estatísticas de acessibilidade do AVA levantadas e documentadas antes da
 % ----------------------------------------------------------
 \bibliography{bibliografia}
 % ---
+
+
+\begin{concat}
+    \includepdf{concat.pdf}
+    % \includepdf{banca.pdf}
+\end{concat}
+
 
 
 % ----------------------------------------------------------
